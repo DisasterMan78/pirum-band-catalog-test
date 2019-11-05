@@ -5,7 +5,7 @@ Latest Node.js, React, Redux + deps:
 * `$ npm install -g create-react-app`
 * `$ create-react-app pirum-react-test`
 * `$ cd pirum-react-test/`
-* `$ npm install typescript` Dependency of tsutils as part of create-react-app
+* `$ npm install typescript` Dependency of tsutils as part of create-react-app (Not using Typescript at this point)
 * `$ npm install redux react-redux redux-thunk --save`
 
 
@@ -40,3 +40,10 @@ N.B. The ESLint configuration process may change between versions
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     },
 ```
+
+Unit testing:
+* `$ npm install --save-dev jest enzyme enzyme-adapter-react-16 chai chai-enzyme sinon sinon-chai react-test-renderer redux-mock-store fetch-mock node-fetch`
+
+
+Supporting React packages
+* `$ npm install redux-logger`
