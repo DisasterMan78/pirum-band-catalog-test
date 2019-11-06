@@ -46,4 +46,4 @@ Unit testing:
 
 
 Supporting React packages
-* `$ npm install redux-logger`
+* `$ npm install redux-logger prop-types`
