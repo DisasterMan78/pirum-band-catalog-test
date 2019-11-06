@@ -14,6 +14,7 @@ import thunk from 'redux-thunk';
 import { initialState } from '../redux/reducers';
 
 import BandList from './band-list';
+import testData from './testData.json';
 
 configure({ adapter: new Adapter() }); // configures Enzyme adapter
 
@@ -22,7 +23,8 @@ chai.use(sinonChai);
 
 const middleware = [thunk],
       mockStore = configureMockStore(middleware),
-      store = mockStore(initialState),
+      storeData = { ...initialState, ...testData },
+      store = mockStore(storeData),
       Component = () => (
         <Provider store={store}>
           <BandList />
@@ -40,8 +42,13 @@ describe('Album list component', () => {
       .to.equal(1);
   });
 
-  it('should render a list to hold the albums', () => {
+  it('should render a list to hold the bands', () => {
     expect(wrapper.find('ul').length)
       .to.equal(1);
+  });
+
+  it('should render a list item for each band', () => {
+    expect(wrapper.find('li').length)
+      .to.equal(Object.keys(testData.bands).length);
   });
 });

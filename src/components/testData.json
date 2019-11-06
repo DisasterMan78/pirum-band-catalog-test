@@ -1,0 +1,39 @@
+{
+  "bands": {
+    "Cat Power": {
+      "band": "Cat Power",
+      "albums": {
+        "Sun": {
+          "band": "Cat Power",
+          "album": "Sun",
+          "songs": ["Human Being", "Always On My Own", "3, 6, 9"]
+        }
+      }
+    },
+    "Beatles": {
+      "band": "Beatles",
+      "albums": {
+        "Abbey Road": {
+          "band": "Beatles",
+          "album": "Abbey Road",
+          "songs": ["Maxwell's Silver Hammer", "Here Comes the Sun", "I Want You (She's So Heavy)"]
+        },
+        "Yellow Submarine": {
+          "band": "Beatles",
+          "album": "Yellow Submarine",
+          "songs": ["Yellow Submarine", "Only a Northern Song", "Hey Bulldog"]
+        }
+      }
+    },
+    "Thomas J. Bergersen": {
+      "band": "Thomas J. Bergersen",
+      "albums": {
+        "Sun": {
+          "band": "Thomas J. Bergersen",
+          "album": "Sun",
+          "songs": ["Our Destiny", "Final Frontier", "Colors of Love"]
+        }
+      }
+    }
+  }
+}
