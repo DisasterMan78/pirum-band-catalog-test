@@ -12,10 +12,10 @@ const BandList = () => {
         bands = useSelector((state) => state.bands);
 
   return (
-    <div>
+    <div className="bands-list">
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <button type="button" id="load-songs" onClick={buttonOnClick}>Show Songs</button>
-      <ul className="bands-listing">
+      <ul className="band-item">
         {bands && Object.keys(bands).map((bandKey) => {
           return (<AlbumList band={bands[bandKey]} key={bandKey} />);
         })}

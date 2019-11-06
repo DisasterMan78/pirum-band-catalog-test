@@ -43,7 +43,7 @@ describe('Band list component', () => {
   });
 
   it('should render a list to hold the bands', () => {
-    expect(wrapper.find('ul.bands-listing').length)
+    expect(wrapper.find('ul.band-item').length)
       .to.equal(1);
   });
 

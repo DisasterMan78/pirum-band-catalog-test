@@ -25,8 +25,8 @@ describe('Album list component', () => {
     expect(wrapper.exists()).to.equal(true);
   });
 
-  it('should render a list itme to hold the band', () => {
-    expect(wrapper.find('li').length)
+  it('should render a list item to hold the band and albums', () => {
+    expect(wrapper.find('li.band-item').length)
       .to.equal(1);
   });
 
@@ -40,7 +40,7 @@ describe('Album list component', () => {
   });
 
   it('should render a list for each album', () => {
-    expect(wrapper.find('ul.album-listing').length)
+    expect(wrapper.find('SongList').length)
       .to.equal(Object.keys(bandData.albums).length);
   });
 });
