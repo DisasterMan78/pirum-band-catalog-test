@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchData } from '../redux/actions/index';
 import AlbumList from './album-list';
 
+import './band-list.css';
+
 const BandList = () => {
   const dispatch = useDispatch(),
         bands = useSelector((state) => state.bands);

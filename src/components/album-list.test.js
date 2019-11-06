@@ -32,11 +32,17 @@ describe('Album list component', () => {
 
   it('should render a heading with the band name', () => {
     const h2 = wrapper.find('h2');
+
     expect(h2.length)
       .to.equal(1);
 
     expect(h2.text())
-      .to.equal(bandData.band);
+      .to.equal(`${bandData.band}+`);
+  });
+
+  it('shold render a toggle button to control album display', () => {
+    expect(wrapper.find('h2 ToggleButton').length)
+      .to.equal(1);
   });
 
   it('should render a list for each album', () => {

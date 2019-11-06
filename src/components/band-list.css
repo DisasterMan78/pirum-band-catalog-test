@@ -1,0 +1,7 @@
+li > ul {
+  display: none;
+}
+
+li.open > ul {
+  display: block;
+}

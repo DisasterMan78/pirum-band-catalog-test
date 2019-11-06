@@ -46,7 +46,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
     "fetch-mock": "^8.0.0-alpha.14",
     "jest": "^24.9.0",
     "json-loader": "^0.5.7",
