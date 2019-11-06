@@ -31,8 +31,13 @@ const middleware = [thunk],
       wrapper = mount(<Component />);
 
 describe('Album list component', () => {
-  it('should render', () => {
+  it('should render without crashing', () => {
     expect(wrapper.exists()).to.equal(true);
+  });
+
+  it('should render a button to load the data', () => {
+    expect(wrapper.find('button#load-songs').length)
+      .to.equal(1);
   });
 
   it('should render a list to hold the albums', () => {
