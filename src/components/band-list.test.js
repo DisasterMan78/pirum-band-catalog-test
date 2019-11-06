@@ -37,11 +37,6 @@ describe('Band list component', () => {
     expect(wrapper.exists()).to.equal(true);
   });
 
-  it('should render a button to load the data', () => {
-    expect(wrapper.find('button#load-songs').length)
-      .to.equal(1);
-  });
-
   it('should render a list to hold the bands', () => {
     expect(wrapper.find('ul.band-item').length)
       .to.equal(1);
