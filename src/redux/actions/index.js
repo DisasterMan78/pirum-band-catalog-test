@@ -1,9 +1,8 @@
-const API_URL = '/public';
-
+const API_URL = 'http://localhost:3004';
 
 function fetchApi(dispatch, endpoint, request, received) {
-  dispatch(request());
 
+  dispatch(request());
   return fetch(`${API_URL}${endpoint}`)
     .then(
       (response) => response.json(),
@@ -16,7 +15,7 @@ function fetchApi(dispatch, endpoint, request, received) {
 }
 
 
-const dataEndpoint = '/data.json';
+const dataEndpoint = '/songs';
 
 export const REQUEST_DATA = 'REQUEST_DATA';
 export const RECEIVE_DATA = 'RECEIVE_DATA';

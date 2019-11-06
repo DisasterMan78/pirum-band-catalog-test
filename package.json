@@ -48,6 +48,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "fetch-mock": "^8.0.0-alpha.14",
     "jest": "^24.9.0",
+    "json-loader": "^0.5.7",
     "node-fetch": "^2.6.0",
     "react-test-renderer": "^16.11.0",
     "redux-mock-store": "^1.5.3"

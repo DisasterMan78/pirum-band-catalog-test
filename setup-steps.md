@@ -42,7 +42,7 @@ N.B. The ESLint configuration process may change between versions
 ```
 
 Unit testing:
-* `$ npm install --save-dev jest enzyme enzyme-adapter-react-16 chai chai-enzyme sinon sinon-chai react-test-renderer redux-mock-store fetch-mock node-fetch`
+* `$ npm install --save-dev jest enzyme enzyme-adapter-react-16 chai chai-enzyme sinon sinon-chai react-test-renderer redux-mock-store fetch-mock node-fetch json-loader`
 
 
 Supporting React packages

@@ -5,7 +5,7 @@ import {
 
 export const initialState = {
   loading: false,
-  albums: [],
+  bands: {},
 };
 
 
