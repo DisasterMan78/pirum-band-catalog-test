@@ -9,7 +9,7 @@ const SongList = (props) => {
       <h3>{album.album}</h3>
       <ul className="song-list">
         {album.songs && Object.keys(album.songs).map((songKey) => {
-          return (<li className="song-item" band={album.songs[songKey] } key={songKey}>{songKey}</li>);
+          return (<li className="song-item" key={songKey}>{album.songs[songKey]}</li>);
         })}
       </ul>
     </li>

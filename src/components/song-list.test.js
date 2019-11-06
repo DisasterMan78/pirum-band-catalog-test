@@ -44,8 +44,15 @@ describe('Song list component', () => {
       .to.equal(1);
   });
 
-  it('should render a list item for each song', () => {
-    expect(wrapper.find('li.song-item').length)
+  it('should render a list item for each song containing the song name', () => {
+    const songs = wrapper.find('li.song-item');
+
+    expect(songs.length)
       .to.equal(Object.keys(albumData.songs).length);
+
+    songs.forEach((song, index) => {
+      expect(song.text())
+        .to.equal(albumData.songs[index]);
+    })
   });
 });
