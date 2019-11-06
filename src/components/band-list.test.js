@@ -32,7 +32,7 @@ const middleware = [thunk],
       ),
       wrapper = mount(<Component />);
 
-describe('Album list component', () => {
+describe('Band list component', () => {
   it('should render without crashing', () => {
     expect(wrapper.exists()).to.equal(true);
   });
@@ -43,12 +43,15 @@ describe('Album list component', () => {
   });
 
   it('should render a list to hold the bands', () => {
-    expect(wrapper.find('ul').length)
+    expect(wrapper.find('ul.bands-listing').length)
       .to.equal(1);
   });
 
-  it('should render a list item for each band', () => {
-    expect(wrapper.find('li').length)
-      .to.equal(Object.keys(testData.bands).length);
+  it('should render an AlbumList compoent for each band', () => {
+    const bandCount = Object.keys(testData.bands).length,
+          bandComponents = wrapper.find('AlbumList');
+
+    expect(bandComponents)
+      .to.have.lengthOf(bandCount);
   });
 });
