@@ -1,3 +1,16 @@
+# Important Usage Note
+
+The app uses json-server to provide the API functionality.
+
+```
+$ json-server --watch public/data.json --port 3004 # Starts JSON server
+$ npm start # Runs application
+```
+
+To run tests:
+
+`$ npm test`
+
 ### Pirum React Front-End Interview Test
 
 Please read the [pdf file](https://bitbucket.org/pirumcw/pirum-react-test/raw/68c89a51190a5636ccb71ad0cb2afae6511f0f35/Pirum%20React%20Front-end%20test.pdf)
