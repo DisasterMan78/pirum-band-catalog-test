@@ -16,6 +16,8 @@ const BandList = () => {
 
   return (
     <div className="bands-list">
+      <h1>Band Catalog Test</h1>
+      <p>Drill down into the catalog with the buttons to explore albums and songs by these bands</p>
       <ul className="band-item">
         {bands && Object.keys(bands).map((bandKey) => {
           return (<AlbumList band={bands[bandKey]} key={bandKey} />);
