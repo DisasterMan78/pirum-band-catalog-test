@@ -17,7 +17,13 @@ chai.use(sinonChai);
 
 const onClick = stub(),
       Component = () => (
-        <ToggleButton onClick={onClick} />
+        <ToggleButton
+          onClick={onClick}
+          state={false}
+          type="albums"
+          title="Some song or something"
+          id="-some-song-or-something"
+        />
       ),
       wrapper = mount(<Component />);
 

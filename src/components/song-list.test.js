@@ -37,11 +37,11 @@ describe('Song list component', () => {
       .to.equal(1);
 
     expect(h3.text())
-      .to.equal(`${albumData.album}+`);
+      .to.equal(albumData.album);
   });
 
   it('shold render a toggle button to control album display', () => {
-    expect(wrapper.find('h3 ToggleButton').length)
+    expect(wrapper.find('ToggleButton').length)
       .to.equal(1);
   });
 
