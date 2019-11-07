@@ -18,9 +18,7 @@ const SongList = (props) => {
       </h3>
       <ToggleButton onClick={toggleChildren} state={open} type="tracks" title={`${album.band} ${album.album}`} />
       <ul className="song-list">
-        {album.songs && Object.keys(album.songs).map((songKey) => {
-          return (<li className="song-item" key={songKey}>{album.songs[songKey]}</li>);
-        })}
+        {album.songs && Object.keys(album.songs).map((songKey) => (<li className="song-item" key={songKey}>{album.songs[songKey]}</li>))}
       </ul>
     </li>
   );

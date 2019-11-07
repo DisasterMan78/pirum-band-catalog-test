@@ -59,6 +59,6 @@ describe('Song list component', () => {
     songs.forEach((song, index) => {
       expect(song.text())
         .to.equal(albumData.songs[index]);
-    })
+    });
   });
 });

@@ -1,7 +1,6 @@
 const API_URL = 'http://localhost:3004';
 
 function fetchApi(dispatch, endpoint, request, received) {
-
   dispatch(request());
   return fetch(`${API_URL}${endpoint}`)
     .then(

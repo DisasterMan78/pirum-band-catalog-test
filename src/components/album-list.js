@@ -5,7 +5,6 @@ import ToggleButton from './toggle-button';
 import SongList from './song-list';
 
 const AlbumList = (props) => {
-
   const { band } = props,
         [open, setOpen] = useState(false),
         toggleChildren = () => {
@@ -20,6 +19,7 @@ const AlbumList = (props) => {
       </h2>
       <ToggleButton onClick={toggleChildren} state={open} type="albums" title={band.band} />
       <ul className="album-list">
+        {/* eslint-disable-next-line arrow-body-style */}
         {band.albums && Object.keys(band.albums).map((albumKey) => {
           return (<SongList album={band.albums[albumKey]} key={albumKey} />);
         })}

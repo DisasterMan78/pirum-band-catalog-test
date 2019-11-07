@@ -69,9 +69,6 @@ h2, h3 {
   left: 11px;
 }
 
-.toggle-button .icon {
-}
-
 @media only screen and (max-device-width : 567px) {
   body{
     font-size: 0.6rem;

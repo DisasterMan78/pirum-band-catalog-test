@@ -65,7 +65,7 @@ describe('DATA ACTIONS', () => {
                   'Abbey Road': {
                     band: 'Beatles',
                     album: 'Abbey Road',
-                    songs: ['Maxwell\'s Silver Hammer', 'Here Comes the Sun' ],
+                    songs: ['Maxwell\'s Silver Hammer', 'Here Comes the Sun'],
                   },
                 },
               },
