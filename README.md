@@ -2,10 +2,20 @@
 
 The app uses json-server to provide the API functionality.
 
+To run the command with minimal hassle, install json-server with
+`$ npm install json-server -g`
+
 ```
 $ json-server --watch public/data.json --port 3004 # Starts JSON server
 $ npm start # Runs application
 ```
+
+N.B. Running json-server on Windows, you may get an error: 
+`[...]json-server.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.`
+
+Of course, that link doesn't work (Thanks MS!) but run the following command to enable the script:
+`$ Set-ExecutionPolicy unrestricted`
+
 
 To run tests:
 
