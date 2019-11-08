@@ -17,23 +17,24 @@ const reducer = (state = initialState, action) => {
     case RECEIVE_DATA: {
       const tracks = action.results,
             bands = {};
+      if (tracks) {
+        tracks.forEach((track) => {
+          if (!bands[track.band]) {
+            bands[track.band] = {};
+            bands[track.band].band = track.band;
+            bands[track.band].albums = {};
+          }
 
-      tracks.forEach((track) => {
-        if (!bands[track.band]) {
-          bands[track.band] = {};
-          bands[track.band].band = track.band;
-          bands[track.band].albums = {};
-        }
+          if (!bands[track.band].albums[track.album]) {
+            bands[track.band].albums[track.album] = {};
+            bands[track.band].albums[track.album].band = track.band;
+            bands[track.band].albums[track.album].album = track.album;
+            bands[track.band].albums[track.album].songs = [];
+          }
 
-        if (!bands[track.band].albums[track.album]) {
-          bands[track.band].albums[track.album] = {};
-          bands[track.band].albums[track.album].band = track.band;
-          bands[track.band].albums[track.album].album = track.album;
-          bands[track.band].albums[track.album].songs = [];
-        }
-
-        bands[track.band].albums[track.album].songs.push(track.song);
-      });
+          bands[track.band].albums[track.album].songs.push(track.song);
+        });
+      }
 
       return {
         ...state,
