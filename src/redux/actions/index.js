@@ -1,15 +1,30 @@
 const API_URL = 'http://localhost:3004';
 
+function handleResponse(response) {
+  return response.json()
+    .then((json) => {
+      if (!response.ok) {
+        const error = {
+          ...json,
+          status: response.status,
+          statusText: response.statusText,
+        };
+
+        return Promise.reject(error);
+      }
+      return json;
+    });
+}
+
 function fetchApi(dispatch, endpoint, request, received) {
   dispatch(request());
   return fetch(`${API_URL}${endpoint}`)
-    .then(
-      (response) => response.json(),
-      // eslint-disable-next-line no-console
-      (error) => console.log('An error occurred.', error),
-    )
+    .then(handleResponse)
     .then((json) => {
       dispatch(received(json));
+    })
+    .catch((error) => {
+      return dispatch(received({ error: error.message }))
     });
 }
 

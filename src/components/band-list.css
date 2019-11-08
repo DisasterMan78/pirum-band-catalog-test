@@ -11,6 +11,10 @@ li.open > ul {
 h2, h3 {
   display: inline-block;
 }
+.error-display{
+  font-weight: bold;
+  color: #c00;
+}
 
 .bands-list{
   width: calc(100% - 40px);

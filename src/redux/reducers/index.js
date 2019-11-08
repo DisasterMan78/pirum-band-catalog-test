@@ -15,8 +15,18 @@ const reducer = (state = initialState, action) => {
       return { ...state, loading: true };
 
     case RECEIVE_DATA: {
+      if (action.results.error) {
+        return {
+          ...state,
+          bands: {},
+          error: action.results.error,
+          loading: false,
+        };
+      }
+
       const tracks = action.results,
             bands = {};
+
       if (tracks) {
         tracks.forEach((track) => {
           if (!bands[track.band]) {

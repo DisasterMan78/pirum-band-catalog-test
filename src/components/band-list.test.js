@@ -23,7 +23,11 @@ chai.use(sinonChai);
 
 const middleware = [thunk],
       mockStore = configureMockStore(middleware),
-      storeData = { ...initialState, ...testData },
+      storeData = {
+        ...initialState,
+        ...testData,
+        error: 'It\'s all gone a bit Pete Tong!',
+      },
       store = mockStore(storeData),
       Component = () => (
         <Provider store={store}>
@@ -48,5 +52,10 @@ describe('Band list component', () => {
 
     expect(bandComponents)
       .to.have.lengthOf(bandCount);
+  });
+
+  it('should render the ErrorDisplay compoennt if there is an error message in the data', () => {
+    expect(wrapper.find('ErrorDisplay').length)
+      .to.equal(1);
   });
 });
