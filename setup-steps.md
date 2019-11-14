@@ -47,3 +47,8 @@ Unit testing:
 
 Supporting React packages
 * `$ npm install redux-logger prop-types`
+
+Converting to Typescript
+
+* `$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+* `$ npm install --save-dev @types/react-redux`
