@@ -5,22 +5,9 @@ import { fetchData } from '../redux/actions/index';
 import ErrorDisplay from './error-display';
 import AlbumList from './album-list';
 
+import { BandsType } from '../prium-react-test';
+
 import './band-list.css';
-
-type AlbumType = {
-  band: string;
-  album: string;
-  tracks: [ string ];
-}
-
-type BandType = {
-  band: string;
-  albums: [ AlbumType ];
-}
-
-type BandsType = {
-  [key:string]: BandType;
-}
 
 const BandList: FunctionComponent = () => {
   let errorDisplay;
