@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { FunctionComponent, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchData } from '../redux/actions/index';
@@ -7,12 +7,27 @@ import AlbumList from './album-list';
 
 import './band-list.css';
 
-const BandList = () => {
+type AlbumType = {
+  band: string;
+  album: string;
+  tracks: [ string ];
+}
+
+type BandType = {
+  band: string;
+  albums: [ AlbumType ];
+}
+
+type BandsType = {
+  [key:string]: BandType;
+}
+
+const BandList: FunctionComponent = () => {
   let errorDisplay;
 
   const dispatch = useDispatch(),
-        error = useSelector((state) => state.error),
-        bands = useSelector((state) => state.bands);
+        error = useSelector((state: { error: object; }) => state.error),
+        bands = useSelector((state: { bands: BandsType; }) => state.bands);
 
   if (error) {
     errorDisplay = (<ErrorDisplay error={error} />);

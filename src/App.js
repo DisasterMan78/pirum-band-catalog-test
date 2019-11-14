@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-import BandList from './components/band-list';
+import BandList from './components/band-list.tsx';
 
 import './App.css';
 
