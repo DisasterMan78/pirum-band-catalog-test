@@ -26,6 +26,21 @@ describe('DATA ACTIONS', () => {
     expect(reducer(initialState, action)).toEqual(expectedState);
   });
 
+  it('should return the errors if there was a problem with the API', () => {
+    const errorMessage = 'It\'s all gone a bit Pete Tong!',
+          action = {
+            type: types.RECEIVE_DATA,
+            results: { error: errorMessage },
+          },
+          expectedState = {
+            ...initialState,
+            loading: false,
+            error: errorMessage,
+          };
+
+    expect(reducer(initialState, action)).toEqual(expectedState);
+  });
+
   it('should return the correct state when data received', () => {
     const action = {
             type: types.RECEIVE_DATA,
