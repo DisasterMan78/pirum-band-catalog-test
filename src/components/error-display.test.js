@@ -49,6 +49,6 @@ describe('Error display component', () => {
       .to.equal(1);
 
     expect(advice.text())
-      .to.equal('Is json-server running?');
+      .to.equal('Is json-server running? Check README.md for info');
   });
 });

@@ -7,7 +7,7 @@ const ErrorDisplay = (props) => {
   const { error } = props;
 
   if (error === 'Failed to fetch') {
-    advice = 'Is json-server running?';
+    advice = 'Is json-server running? Check README.md for info';
   }
 
   return (
