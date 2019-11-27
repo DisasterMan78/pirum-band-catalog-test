@@ -5,7 +5,7 @@ export as namespace PriumReactTest;
 export interface AlbumType {
   band: string;
   album: string;
-  tracks: [ string ];
+  songs: [ string ];
 }
 
 export interface BandType {
