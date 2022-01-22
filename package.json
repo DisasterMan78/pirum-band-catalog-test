@@ -56,7 +56,7 @@
     "fetch-mock": "^8.0.0-alpha.14",
     "jest": "^24.9.0",
     "json-loader": "^0.5.7",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "react-test-renderer": "^16.11.0",
     "redux-mock-store": "^1.5.3",
     "typescript": "^3.7.2"
